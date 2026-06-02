@@ -32,19 +32,22 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Tech4IT" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/favicon.svg",
+    apple: "/logo.svg",
   },
   openGraph: {
     title: "Tech4IT - Building Modern Software Solutions",
     description:
       "High-performance applications, intelligent trading systems, and AI-powered solutions that drive business growth.",
     type: "website",
+    images: ["/logo.svg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Tech4IT - Building Modern Software Solutions",
     description:
       "High-performance applications, intelligent trading systems, and AI-powered solutions.",
+    images: ["/logo.svg"],
   },
 };
 
