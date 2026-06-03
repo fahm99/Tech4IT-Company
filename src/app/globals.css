@@ -123,6 +123,24 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Arabic font: استخدم Cairo للنصوص و Noto Sans Arabic للنسخ الاحتياطي */
+  html[dir="rtl"] body {
+    font-family: var(--font-cairo), var(--font-noto-arabic), var(--font-geist-sans), system-ui, sans-serif;
+  }
+  /* Markdown في RTL: تأكد من عرض الأكواد والروابط بشكل صحيح */
+  html[dir="rtl"] .markdown-body {
+    direction: rtl;
+    text-align: right;
+  }
+  html[dir="rtl"] .markdown-body pre,
+  html[dir="rtl"] .markdown-body code {
+    direction: ltr;
+    text-align: left;
+  }
+  /* إصلاح خلفية الكود لـ RTL */
+  html[dir="rtl"] .markdown-body pre code {
+    direction: ltr;
+  }
 }
 
 /* Custom scrollbar */

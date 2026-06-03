@@ -3,6 +3,7 @@ export interface Project {
   title: string;
   slug: string;
   shortDescription: string;
+  description: string;
   technologies: string[];
   coverImage: string;
   galleryImages: string[];
@@ -13,8 +14,13 @@ export interface Project {
   customImages: string[];
   category: ProjectCategory;
   featured: boolean;
+  status: 'draft' | 'published' | 'archived';
+  displayOrder: number;
+  metaTitle: string;
+  metaDescription: string;
   createdAt: string;
   updatedAt: string;
+  publishedAt: string | null;
 }
 
 export type ProjectCategory =
@@ -31,6 +37,7 @@ export interface ContactMessage {
   email: string;
   projectType: string;
   message: string;
+  isRead: boolean;
   createdAt: string;
 }
 
@@ -42,13 +49,16 @@ export interface SiteSettings {
   telegram: string;
   heroTitle: string;
   heroSubtitle: string;
+  aboutText: string;
 }
 
 export interface SiteStats {
   totalProjects: number;
   totalVisits: number;
   featuredProjects: number;
+  publishedProjects: number;
   totalContacts: number;
+  unreadContacts: number;
 }
 
 export type Language = 'en' | 'ar';
